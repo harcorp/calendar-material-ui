@@ -1,7 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { useLicenseVerifier } from '@mui/x-license-pro';
 import { alpha, styled, useThemeProps } from '@mui/material/styles';
 import { unstable_composeClasses as composeClasses } from '@mui/utils';
 import { useUtils } from '@mui/x-date-pickers/internals';
@@ -11,9 +10,7 @@ import {
   getDateRangePickerDayUtilityClass,
   dateRangePickerDayClasses,
 } from './dateRangePickerDayClasses';
-import { getReleaseInfo } from '../internals/utils/releaseInfo';
-
-const releaseInfo = getReleaseInfo();
+import type {} from '@mui/material/themeCssVarsAugmentation';
 
 export interface DateRangePickerDayProps<TDate>
   extends Omit<PickersDayProps<TDate>, 'classes' | 'onBlur' | 'onFocus' | 'onKeyDown'> {
@@ -291,7 +288,6 @@ const DateRangePickerDayRaw = React.forwardRef(function DateRangePickerDay<TDate
     ...other
   } = props;
 
-  useLicenseVerifier('x-date-pickers-pro', releaseInfo);
   const utils = useUtils<TDate>();
 
   const isEndOfMonth = utils.isSameDay(day, utils.endOfMonth(day));

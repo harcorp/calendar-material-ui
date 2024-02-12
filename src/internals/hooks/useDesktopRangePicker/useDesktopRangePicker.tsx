@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useSlotProps } from '@mui/base/utils';
-import { useLicenseVerifier } from '@mui/x-license-pro';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import {
   PickersLayout,
@@ -24,12 +23,10 @@ import {
   UseDesktopRangePickerSlotsComponentsProps,
 } from './useDesktopRangePicker.types';
 import { useEnrichedRangePickerFieldProps } from '../useEnrichedRangePickerFieldProps';
-import { getReleaseInfo } from '../../utils/releaseInfo';
 import { DateRange } from '../../models/range';
 import { RangeFieldSection } from '../../models/fields';
 import { useRangePosition } from '../useRangePosition';
 
-const releaseInfo = getReleaseInfo();
 
 export const useDesktopRangePicker = <
   TDate,
@@ -39,7 +36,6 @@ export const useDesktopRangePicker = <
   props,
   ...pickerParams
 }: UseDesktopRangePickerParams<TDate, TView, TExternalProps>) => {
-  useLicenseVerifier('x-date-pickers-pro', releaseInfo);
 
   const {
     slots,

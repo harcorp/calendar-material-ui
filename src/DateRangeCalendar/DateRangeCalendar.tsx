@@ -6,7 +6,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { resolveComponentProps } from '@mui/base/utils';
 import { styled, useThemeProps } from '@mui/material/styles';
 import { unstable_composeClasses as composeClasses } from '@mui/utils';
-import { Watermark } from '@mui/x-license-pro';
 import { PickersCalendarHeader } from '@mui/x-date-pickers/PickersCalendarHeader';
 import {
   applyDefaultDate,
@@ -54,8 +53,6 @@ import { DateRangePickerDay, dateRangePickerDayClasses as dayClasses } from '../
 import { rangeValueManager } from '../internals/utils/valueManagers';
 import { useDragRange } from './useDragRange';
 import { useRangePosition } from '../internals/hooks/useRangePosition';
-
-const releaseInfo = getReleaseInfo();
 
 const DateRangeCalendarRoot = styled('div', {
   name: 'MuiDateRangeCalendar',
@@ -533,7 +530,6 @@ const DateRangeCalendar = React.forwardRef(function DateRangeCalendar<TDate>(
       ownerState={ownerState}
       {...other}
     >
-      <Watermark packageName="x-date-pickers-pro" releaseInfo={releaseInfo} />
       {calendarMonths.map((month, index) => (
         <DateRangeCalendarMonthContainer key={month} className={classes.monthContainer}>
           {calendars === 1 ? (

@@ -1,4 +1,3 @@
-export { LicenseInfo } from '@mui/x-license-pro';
 export * from '@mui/x-date-pickers';
 
 export * from './DateRangePickerDay';
