@@ -2,14 +2,94 @@
   "name": "@harcorp/calendar-material-io",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "install-peers"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harcorp/calendar-material-ui.git"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.15.10",
+    "@mui/system": "^5.8.0",
+    "@types/luxon": "^3.3.7",
+    "@types/moment-jalaali": "^0.7.8",
+    "@types/node": "^20.11.17",
+    "@types/react-transition-group": "^4.4.10",
+    "date-fns": "^2.25.0 || ^3.2.0",
+    "date-fns-jalali": "^2.13.0-0",
+    "dayjs": "^1.10.7",
+    "install-peers-cli": "^2.2.0",
+    "luxon": "^3.0.2",
+    "moment": "^2.29.4",
+    "moment-hijri": "^2.1.2",
+    "moment-jalaali": "^0.7.4 || ^0.8.0 || ^0.9.0 || ^0.10.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
     "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@mui/base": "^5.0.0-beta.36",
+    "@mui/utils": "^5.15.9",
+    "@mui/x-date-pickers": "^6.19.4",
+    "react-transition-group": "^4.4.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.15.10",
+    "@mui/system": "^5.8.0",
+    "date-fns": "^2.25.0 || ^3.2.0",
+    "date-fns-jalali": "^2.13.0-0",
+    "dayjs": "^1.10.7",
+    "luxon": "^3.0.2",
+    "moment": "^2.29.4",
+    "moment-hijri": "^2.1.2",
+    "moment-jalaali": "^0.7.4 || ^0.8.0 || ^0.9.0 || ^0.10.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@emotion/react": {
+      "optional": true
+    },
+    "@emotion/styled": {
+      "optional": true
+    },
+    "date-fns": {
+      "optional": true
+    },
+    "date-fns-jalali": {
+      "optional": true
+    },
+    "dayjs": {
+      "optional": true
+    },
+    "luxon": {
+      "optional": true
+    },
+    "moment": {
+      "optional": true
+    },
+    "moment-hijri": {
+      "optional": true
+    },
+    "moment-jalaali": {
+      "optional": true
+    }
   }
 }
