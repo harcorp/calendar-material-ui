@@ -1,5 +1,5 @@
 {
-  "name": "@harcorp/calendar-material-io",
+  "name": "calendar-material-io",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",

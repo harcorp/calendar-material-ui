@@ -1,1 +1,1 @@
-export { AdapterDateFnsJalali } from './AdapterDateFnsJalali';
+export { AdapterDateFnsJalali } from '@mui/x-date-pickers/AdapterDateFnsJalali';

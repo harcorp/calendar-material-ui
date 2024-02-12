@@ -1,52 +1,34 @@
-// Clocks
-export * from './TimeClock';
-export * from './DigitalClock';
-export * from './MultiSectionDigitalClock';
+export { LicenseInfo } from '@mui/x-license-pro';
+export * from '@mui/x-date-pickers';
 
-export * from './LocalizationProvider';
-export * from './PickersDay';
-export * from './locales';
+export * from './DateRangePickerDay';
 
 // Fields
-export * from './DateField';
-export * from './TimeField';
-export * from './DateTimeField';
+export * from './MultiInputDateRangeField';
+export * from './MultiInputTimeRangeField';
+export * from './MultiInputDateTimeRangeField';
+export * from './SingleInputDateRangeField';
+export * from './SingleInputTimeRangeField';
+export * from './SingleInputDateTimeRangeField';
+export type {
+  RangeFieldSection,
+  BaseMultiInputFieldProps,
+  MultiInputFieldSlotTextFieldProps,
+} from './internals/models/fields';
 
 // Calendars
-export * from './DateCalendar';
-export * from './MonthCalendar';
-export * from './YearCalendar';
-export * from './DayCalendarSkeleton';
+export * from './DateRangeCalendar';
 
-// New Pickers
-export * from './DatePicker';
-export * from './DesktopDatePicker';
-export * from './MobileDatePicker';
-export * from './StaticDatePicker';
-
-export * from './TimePicker';
-export * from './DesktopTimePicker';
-export * from './MobileTimePicker';
-export * from './StaticTimePicker';
-
-export * from './DateTimePicker';
-export * from './DesktopDateTimePicker';
-export * from './MobileDateTimePicker';
-export * from './StaticDateTimePicker';
+// New pickers
+export * from './DateRangePicker';
+export * from './DesktopDateRangePicker';
+export * from './MobileDateRangePicker';
+export * from './StaticDateRangePicker';
 
 // View renderers
-export * from './dateViewRenderers';
-export * from './timeViewRenderers';
+export * from './dateRangeViewRenderers';
 
-// Layout
-export * from './PickersLayout';
-export * from './PickersActionBar';
-export * from './PickersShortcuts';
-
-export { DEFAULT_DESKTOP_MODE_MEDIA_QUERY } from './internals/utils/utils';
+export type { DateRange, RangePosition } from './internals/models/range';
+export type { UseDateRangeFieldProps } from './internals/models/dateRange';
 
 export * from './models';
-
-export * from './icons';
-
-export * from './hooks';

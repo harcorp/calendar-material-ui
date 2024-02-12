@@ -1,1 +1,1 @@
-export { AdapterMoment } from './AdapterMoment';
+export { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';

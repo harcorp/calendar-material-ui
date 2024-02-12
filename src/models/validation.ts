@@ -1,26 +1,16 @@
-/**
- * Validation error types applicable to both date and time validation
- */
-type CommonDateTimeValidationError = 'invalidDate' | 'disableFuture' | 'disablePast' | null;
+import {
+  DateTimeValidationError,
+  DateValidationError,
+  TimeValidationError,
+} from '@mui/x-date-pickers/models';
 
-export type DateValidationError =
-  | CommonDateTimeValidationError
-  | 'shouldDisableDate'
-  | 'shouldDisableMonth'
-  | 'shouldDisableYear'
-  | 'minDate'
-  | 'maxDate';
+type RangeValidation<ItemError extends string | null> = [
+  ItemError | 'invalidRange',
+  ItemError | 'invalidRange',
+];
 
-export type TimeValidationError =
-  | CommonDateTimeValidationError
-  | 'minutesStep'
-  | 'minTime'
-  | 'maxTime'
-  | 'shouldDisableClock-hours'
-  | 'shouldDisableClock-minutes'
-  | 'shouldDisableClock-seconds'
-  | 'shouldDisableTime-hours'
-  | 'shouldDisableTime-minutes'
-  | 'shouldDisableTime-seconds';
+export type DateRangeValidationError = RangeValidation<DateValidationError>;
 
-export type DateTimeValidationError = DateValidationError | TimeValidationError;
+export type TimeRangeValidationError = RangeValidation<TimeValidationError>;
+
+export type DateTimeRangeValidationError = RangeValidation<DateTimeValidationError>;
